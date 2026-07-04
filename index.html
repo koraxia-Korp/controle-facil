@@ -469,28 +469,39 @@
     ovo:{nome:'Ovo',preco:19.15,un:'kg'}, leite:{nome:'Leite',preco:5.00,un:'L'},
     farinha:{nome:'Farinha de trigo',preco:4.00,un:'kg'}, shoyu:{nome:'Shoyu',preco:5.22,un:'L'},
     pepino:{nome:'Pepino',preco:7.00,un:'kg'}, kani:{nome:'Kani',preco:65.00,un:'kg'},
-    doritos:{nome:'Doritos',preco:63.33,un:'kg'}, panko:{nome:'Farinha panko',preco:17.90,un:'kg'}
+    doritos:{nome:'Doritos',preco:63.33,un:'kg'}, panko:{nome:'Farinha panko',preco:17.90,un:'kg'},
+    alface:{nome:'Alface',preco:6.00,un:'kg'}, cenoura:{nome:'Cenoura',preco:6.00,un:'kg'},
+    oleo:{nome:'Óleo',preco:8.00,un:'L'}, skin:{nome:'Pele de salmão (skin)',preco:0,un:'kg'},
+    manga:{nome:'Manga',preco:0,un:'kg'}, acucar:{nome:'Açúcar',preco:0,un:'kg'}, sal:{nome:'Sal',preco:0,un:'kg'}
   };
-  var INS_BASE_ORDER=['salmao','arroz','alga','cream','cebolinha','gergelim','geleia','shimeji','couve','manteiga','ovo','leite','farinha','shoyu','pepino','kani','doritos','panko'];
+  var INS_BASE_ORDER=['salmao','arroz','alga','cream','cebolinha','gergelim','geleia','shimeji','couve','manteiga','ovo','leite','farinha','shoyu','pepino','kani','doritos','panko','alface','cenoura','oleo','skin','manga','acucar','sal'];
 
   function Pr(n,v,porc,ing){return {id:uid(),n:n,v:v,porc:porc,ing:ing}}
   var SEED_PROD=[
     Pr('Temaki Filadélfia',26.9,1,[['alga',1.3],['cream',15],['cebolinha',3],['arroz',63],['salmao',100]]),
     Pr('Temaki Grelhado',26.9,1,[['alga',1.3],['cream',22],['cebolinha',3],['arroz',68],['salmao',74]]),
     Pr('Temaki Salmão Simples',24.9,1,[['alga',1.3],['arroz',69],['salmao',100]]),
-    Pr('Temaki Hot Filadélfia',28.9,1,[['alga',1.3],['cream',15],['cebolinha',3],['arroz',63],['salmao',100],['ovo',2.33],['leite',2.33],['farinha',2.33]]),
-    Pr('Temaki Hot Grelhado',28.9,1,[['alga',1.3],['cream',22],['cebolinha',3],['arroz',68],['salmao',74],['ovo',2.33],['leite',2.33],['farinha',2.33]]),
+    Pr('Temaki California',24.9,1,[['alga',1.3],['arroz',69],['salmao',100]]),
+    Pr('Temaki Hot Filadélfia',28.9,1,[['alga',1.3],['cream',15],['cebolinha',3],['arroz',63],['salmao',100],['ovo',2.33],['leite',2.33],['panko',2.33]]),
+    Pr('Temaki Hot Grelhado',28.9,1,[['alga',1.3],['cream',22],['cebolinha',3],['arroz',68],['salmao',74],['ovo',2.33],['leite',2.33],['panko',2.33]]),
     Pr('Uramaki Salmão Simples',24.9,8,[['alga',1.3],['arroz',143.7],['salmao',47],['gergelim',1]]),
+    Pr('Uramaki California',24.9,8,[['alga',1.3],['arroz',143.7],['salmao',47],['gergelim',1]]),
+    Pr('Uramaki Skin',24.9,8,[['alga',1.3],['arroz',143.7],['salmao',47],['gergelim',1]]),
     Pr('Uramaki Filadélfia',25.9,8,[['alga',1.3],['cream',15],['cebolinha',3],['arroz',143.7],['salmao',47],['gergelim',1]]),
+    Pr('Uramaki Premium',25.9,8,[['alga',1.3],['cream',15],['cebolinha',3],['arroz',143.7],['salmao',47],['gergelim',1]]),
     Pr('Uramaki Salmão Grelhado',24.9,8,[['alga',1.3],['cream',20],['cebolinha',3],['arroz',148.7],['salmao',46],['gergelim',1]]),
     Pr('Hossomaki',19.9,8,[['alga',1.3],['arroz',104.7],['salmao',34]]),
-    Pr('Hot Holl',24.9,8,[['alga',1.3],['arroz',104.7],['salmao',34],['ovo',2.33],['leite',2.33],['farinha',2.33]]),
+    Pr('Hot Holl',24.9,8,[['alga',1.3],['arroz',104.7],['salmao',34],['ovo',2.33],['leite',2.33],['panko',2.33]]),
     Pr('Hot Holl Grelhado',24.9,8,[['alga',1.3],['cream',20],['cebolinha',3],['arroz',148.7],['salmao',46],['gergelim',1]]),
-    Pr('Niguiri Salmão',32.9,9,[['arroz',23],['salmao',7]]),
-    Pr('Joe Salmão',29.9,8,[['cream',1],['cebolinha',0.5],['arroz',14],['salmao',14]]),
-    Pr('Joe Geleia de Pimenta',29.9,8,[['cream',4],['cebolinha',0.5],['arroz',14],['salmao',14],['geleia',0.5]]),
-    Pr('Joe Crisp',29.9,8,[['cream',1],['cebolinha',0.5],['arroz',14],['salmao',14],['couve',1]]),
-    Pr('Sashimi',35.9,10,[['salmao',14]]),
+    Pr('Hot Holl Premium',24.9,8,[['alga',1.3],['cream',20],['cebolinha',3],['arroz',148.7],['salmao',46],['gergelim',1]]),
+    Pr('Niguiri Salmão',32.9,9,[['arroz',207],['salmao',63]]),
+    Pr('Niguiri Skin',32.9,9,[['arroz',207],['salmao',63]]),
+    Pr('Niguiri Salmão Premium',32.9,9,[['arroz',207],['salmao',81]]),
+    Pr('Joe Salmão',29.9,8,[['cream',8],['cebolinha',4],['arroz',112],['salmao',112]]),
+    Pr('Joe Pepino',29.9,8,[['cream',8],['cebolinha',4],['arroz',112],['salmao',112]]),
+    Pr('Joe Geleia de Pimenta',29.9,8,[['cream',32],['cebolinha',4],['arroz',112],['salmao',112],['geleia',4]]),
+    Pr('Joe Crisp',29.9,8,[['cream',8],['cebolinha',4],['arroz',112],['salmao',112],['couve',8]]),
+    Pr('Sashimi',35.9,10,[['salmao',140]]),
     Pr('Shimeji',21.9,1,[['shimeji',200],['manteiga',10],['shoyu',20]])
   ];
   var SEED_FOLHA=[
@@ -507,12 +518,12 @@
   // combos-semente: peças (nome livre) → mapeadas ao produto mais próximo
   var PIECE_MAP={
     'Hossomaki Salmão':'Hossomaki','Hossomaki Skin':'Hossomaki','Hossomaki Pepino':'Hossomaki',
-    'Hot Holl':'Hot Holl','Hot Premium':'Hot Holl Grelhado',
-    'Joe Salmão':'Joe Salmão','Joe Crisp':'Joe Crisp','Joe Pepino':'Joe Salmão','Joe Geleia de Pimenta':'Joe Geleia de Pimenta','Joe Salmão Crispy':'Joe Crisp',
-    'Niguiri Salmão':'Niguiri Salmão','Niguiri Skin':'Niguiri Salmão','Niguiri Salmão Premium':'Niguiri Salmão',
+    'Hot Holl':'Hot Holl','Hot Premium':'Hot Holl Premium',
+    'Joe Salmão':'Joe Salmão','Joe Crisp':'Joe Crisp','Joe Pepino':'Joe Pepino','Joe Geleia de Pimenta':'Joe Geleia de Pimenta','Joe Salmão Crispy':'Joe Crisp',
+    'Niguiri Salmão':'Niguiri Salmão','Niguiri Skin':'Niguiri Skin','Niguiri Salmão Premium':'Niguiri Salmão Premium',
     'Sashimi Salmão':'Sashimi','Sashimi Massaricado':'Sashimi',
-    'Uramaki Filadélfia':'Uramaki Filadélfia','Uramaki Premium':'Uramaki Filadélfia','Uramaki Grelhado':'Uramaki Salmão Grelhado','Uramaki Salmão Grelhado':'Uramaki Salmão Grelhado','Uramaki California':'Uramaki Salmão Simples','Uramaki Skin':'Uramaki Salmão Simples',
-    'Temaki California':'Temaki Salmão Simples','Temaki Filadélfia':'Temaki Filadélfia','Temaki Salmão Simples':'Temaki Salmão Simples'
+    'Uramaki Filadélfia':'Uramaki Filadélfia','Uramaki Premium':'Uramaki Premium','Uramaki Grelhado':'Uramaki Salmão Grelhado','Uramaki Salmão Grelhado':'Uramaki Salmão Grelhado','Uramaki California':'Uramaki California','Uramaki Skin':'Uramaki Skin',
+    'Temaki California':'Temaki California','Temaki Filadélfia':'Temaki Filadélfia','Temaki Salmão Simples':'Temaki Salmão Simples'
   };
   var SEED_COMBOS_DEF=[
     {n:'Barca Akatsuky',tipo:'barca',v:349.9,emb:6.00,pecas:[['Hossomaki Salmão',20],['Hossomaki Skin',10],['Hot Holl',10],['Hot Premium',10],['Joe Crisp',8],['Joe Pepino',8],['Joe Salmão',8],['Niguiri Salmão',10],['Niguiri Skin',10],['Sashimi Salmão',30],['Uramaki Filadélfia',10],['Uramaki Premium',10],['Uramaki Salmão Grelhado',10]]},

@@ -3,6 +3,12 @@
 App web mobile-first para controlar **custo, margem e preço** de um delivery de sushi/temaki.
 Nasceu da planilha `ficha-tecnica-original.xlsx` e virou um aplicativo instalável (PWA).
 
+**🔗 App no ar:** https://koraxia-korp.github.io/controle-facil/
+
+O app já vem **populado com todos os dados da planilha**: 25 produtos, 9 combos/barcas,
+25 insumos, 7 funcionários (dois cenários) e 8 contas fixas de operação.
+O deploy é automático via GitHub Actions (`.github/workflows/deploy-pages.yml`) a cada push.
+
 ## Arquivos
 
 | Arquivo | O que é |
