@@ -1,0 +1,15 @@
+{
+  "name": "Sushi · Gestão de Ficha Técnica",
+  "short_name": "Sushi Custos",
+  "description": "Ficha técnica, custos e precificação do seu delivery de sushi.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1319",
+  "theme_color": "#12161f",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
