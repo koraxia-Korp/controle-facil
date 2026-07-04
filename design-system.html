@@ -32,6 +32,11 @@
     --r:14px; --r-sm:10px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  html{scrollbar-width:thin;scrollbar-color:var(--surface-3) transparent}
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:20px;border:3px solid transparent;background-clip:content-box}
+  ::-webkit-scrollbar-thumb:hover{background:var(--muted);background-clip:content-box}
   body{
     background:
       radial-gradient(100% 30% at 50% -2%, color-mix(in oklch,var(--accent) 16%,transparent), transparent 60%),
